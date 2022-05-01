@@ -1,21 +1,20 @@
 {
-  "안녕": "안녕하세요",
-  "할로": {
-    "embed": {
-      "title": "할로놀로",
-      "description": "asdf",
-      "fields": {
-        "할로놀로": "응애"
-      }
+  "안녕" : {
+    "embed" : {
+      "title" : "안녕하세요!",
+      "description" : "할로"
     },
-    "button": {
-      "hello": {
+    "button" : {
+      "hello" : {
+        "callback" : {
+          "message" : "안녕하세요!"
+        }
       },
-      "hellodd": {
+      "hellodd" : {
+        "callback" : {
+          "message" : "hello"
+        }
       }
     }
-  },
-  "꽁기기깅": {
-    "message": "꽁기기"
   }
 }

@@ -1,12 +1,10 @@
 from discord.ext import commands
-from utils.Button import Button
 from dotenv import load_dotenv
-from utils.Embed import Embed
+from utils import Button
+from utils import Embed
 import discord
 import json
 import os
-
-load_dotenv()
 
 intents = discord.Intents().all()
 
@@ -19,15 +17,21 @@ class MyBot(commands.Bot):
         print('Logged on as', self.user)
 
     async def on_message(self, ctx):
+        if ctx.author.bot:
+            return
+
         if ctx.author == self.user:
             return
 
         if ctx.content in command:
+
             content = command[ctx.content].get('message')
             embed = Embed(command[ctx.content].get('embed')).get
-            view = Button(ctx.author, command[ctx.content].get('button'))
-            await ctx.reply(content=content, embed=embed, view=[view])
+            view = Button(ctx, command[ctx.content].get('button'))
+
+            await ctx.reply(content=content, embed=embed, view=view)
 
 
-client = MyBot(command_prefix='!', intents=intents)
-client.run(os.environ.get('TOKEN'))
+load_dotenv()
+bot = MyBot(command_prefix='!', intents=intents)
+bot.run(os.environ.get('TOKEN'))

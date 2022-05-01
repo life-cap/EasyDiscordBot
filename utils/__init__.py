@@ -1,2 +1,2 @@
 from .Embed import *
-from .Button import *
+from .Button import Button

@@ -1,2 +1,2 @@
-# Easy Bot
-### Make it bot very easy.
+# EasyDiscordBot
+### Make it Discord Bot very easy.
