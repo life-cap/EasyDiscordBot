@@ -25,8 +25,8 @@ class MyBot(commands.Bot):
         if ctx.content in command:
             content = command[ctx.content].get('message')
             embed = Embed(command[ctx.content].get('embed')).get
-            view = Button(command[ctx.content].get('button'))
-            await ctx.reply(content=content, embed=embed, view=view)
+            view = Button(ctx.author, command[ctx.content].get('button'))
+            await ctx.reply(content=content, embed=embed, view=[view])
 
 
 client = MyBot(command_prefix='!', intents=intents)
