@@ -1,0 +1,21 @@
+{
+  "안녕": "안녕하세요",
+  "할로": {
+    "embed": {
+      "title": "할로놀로",
+      "description": "asdf",
+      "fields": {
+        "할로놀로": "응애"
+      }
+    },
+    "button": {
+      "hello": {
+      },
+      "hellodd": {
+      }
+    }
+  },
+  "꽁기기깅": {
+    "message": "꽁기기깅"
+  }
+}
