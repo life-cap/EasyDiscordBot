@@ -1,2 +1,3 @@
 # EasyDiscordBot
-### Make it Discord Bot very easy.
+### 쉽고 빠르게 디스코드 봇을 제작해보세요!
+#### ⚠️ 아직 제작중입니다.
