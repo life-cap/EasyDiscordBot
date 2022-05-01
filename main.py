@@ -1,4 +1,3 @@
-
 from discord.ext import commands
 from utils.Button import Button
 from dotenv import load_dotenv
@@ -15,7 +14,7 @@ with open('commands.json', 'r') as f:
     command = json.load(f)
 
 
-class MyClient(commands.Bot):
+class MyBot(commands.Bot):
     async def on_ready(self):
         print('Logged on as', self.user)
 
@@ -30,5 +29,5 @@ class MyClient(commands.Bot):
             await ctx.reply(content=content, embed=embed, view=view)
 
 
-client = MyClient(command_prefix='>', intents=intents)
+client = MyBot(command_prefix='!', intents=intents)
 client.run(os.environ.get('TOKEN'))
